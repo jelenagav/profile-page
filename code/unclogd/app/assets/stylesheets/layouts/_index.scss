@@ -1,0 +1,56 @@
+// Import your layouts CSS files here.
+// Examples:
+// @import "dashboard";
+// @import "profile";
+// @import "map";
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  > .main-container {
+    min-height: 100vh;
+  }
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.remove-button {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 40px;
+  transform: rotate(45deg);
+  color: black;
+  font-weight: 10px;
+}
+
+.display-block {
+  display: block !important;
+}
+
+.select-button {
+  position: absolute;
+  top: 43px;
+  right: -97px;
+  width: 110px !important;
+  background-color: black !important;
+  color: white;
+  transition: opacity 175ms;
+}
+.select-button:hover{
+  color: white;
+  opacity: 0.8;
+}
+
+.bold {
+  height: 12px;
+  border: 0;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.form-relative {
+  position: relative;
+}

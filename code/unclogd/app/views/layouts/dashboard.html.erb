@@ -1,0 +1,36 @@
+<link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
+
+<% content_for :content do %>
+<div class="container">
+  <div class="container-grid">
+
+    <nav class="side-nav">
+
+      <ul class="dashboard-links" style="list-style-type:none;">
+        <li class="<%= 'active' if @active_tab == "overview" %>"><%= link_to "MY ACCOUNT", overview_path %></li>
+        <li class="<%= "active" if @active_tab == "account details" %>"><%= link_to "Account details", user_path(current_user) %></li>
+        <li class="<%= "active" if @active_tab == "Orders" %>"><%= link_to "Orders", orders_path %></li>
+        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "Favourites", root_path %></li>
+        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "Address book", root_path %></li>
+        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "Payment details", root_path %></li>
+        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "Returns", root_path %></li>
+        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "<<<", root_path %></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="container bootstrap center" style="overflow: auto; width:710px; height:600px;">
+
+        <%= yield %>
+
+      </div>
+
+    </main>
+  </div>
+</div>
+
+
+<% end %>
+<% @dashboard = true %>
+
+<%= render template: "layouts/application" %>

@@ -1,0 +1,35 @@
+.footer-wrapper {
+  position: absolute;
+  bottom: 0;
+  background-color: #202529;
+  text-align: center;
+  height: 70px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.footer-bottom {
+  background-color: #202529;
+  text-align: center;
+  color: white;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  color: white;
+  margin: 10px 20px;
+  display: inline-block;
+}
+
+.footer-links i {
+  color: white;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 10px 15px 0 15px;
+}
+
+.footer-links i:hover {
+  opacity: 1;
+}

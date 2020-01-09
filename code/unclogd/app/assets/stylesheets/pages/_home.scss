@@ -1,0 +1,357 @@
+// Specific CSS for your home-page
+
+body {
+  background: transparent;
+}
+
+body.pages.home {
+
+  .flash-screen {
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    transition: opacity 250ms ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+    p {
+      font-family: "Raleway", sans-serif;
+      font-size: 32px;
+      opacity: 0.8;
+    }
+
+    .flash-logo {
+      max-width: 800px;
+    }
+
+    #flash-button {
+      margin-top: 100px;
+    }
+
+    #flash-button:focus {
+      outline: none;
+    }
+  }
+
+  .flash-screen.disappear {
+    opacity: 0;
+  }
+
+
+
+  text-decoration: none;
+
+  height: 100vh;
+
+  h1 {
+    font-family: 'Crimson Text', serif;
+  }
+
+  p {
+    font-family: 'Crimson Text', serif;
+  }
+
+  >.logo {
+    display: none;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .browse-container {
+    float: left;
+    background-color: #212529;
+    color: #B5B5B5;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    text-align: center;
+    position: relative;
+    transition: all .5s;
+    flex-direction: column;
+    text-decoration: none;
+
+    >div {
+      width: 100%;
+      flex: 1 1;
+    }
+
+    >.col3 {
+      position: relative;
+
+      >div {
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+      }
+    }
+  }
+
+  .find-container {
+    background-color: white;
+    color: #B5B5B5;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    text-align: center;
+    position: relative;
+    transition: all .5s;
+    flex-direction: column;
+    text-decoration: none;
+
+
+    >div {
+      width: 100%;
+      flex: 1 1;
+    }
+
+    >.col3 {
+      position: relative;
+
+      >div {
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+      }
+    }
+  }
+
+  .check-container {
+    float: right;
+    background-color: #212529;
+    color: #fff;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    text-align: center;
+    position: relative;
+    transition: opacity .5s ease-in;
+    flex-direction: column;
+    text-decoration: none;
+
+    >div {
+      height: 100%;
+      width: 100%;
+      flex: 1 1;
+    }
+
+    >.col3 {
+      position: relative;
+
+      >div {
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+      }
+    }
+
+    >.col2 {
+
+      >h1,
+      p {
+        color: #B5B5B5;
+        text-decoration: none;
+      }
+
+      >h1,
+      h1 {
+        color: #B5B5B5;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .col2 {
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+  .picture {
+    width: 80px;
+    height: 80px;
+  }
+
+
+  .hidden-text {
+    opacity: 0;
+    transition: all 220ms ease-out;
+  }
+
+  .main-container {
+    overflow: hidden;
+    display: flex;
+    height: 100%;
+    margin: 0;
+  }
+
+  @media (max-width: 576px) {
+    .main-container {
+      display: block;
+    }
+  }
+
+  .find-container:hover {
+    color: black;
+
+    .picture {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .find-container:hover .hidden-text {
+    color: black;
+    opacity: 1;
+  }
+
+  .browse-container:hover {
+    color: white;
+
+    .picture {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .browse-container:hover .hidden-text {
+    color: white;
+    opacity: 1;
+  }
+
+  .check-container:hover {
+    color: white;
+
+    p,
+    h1 {
+      color: white;
+    }
+
+    .picture {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+  }
+
+  .check-container:hover .hidden-text {
+    color: white;
+    opacity: 1;
+  }
+
+
+
+  .picture {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  .picture {
+    transition: all 220ms ease-out;
+  }
+
+
+  .homepage-login {
+    text-align: center;
+    transition: .10s;
+    align-items: right;
+    padding: 0px 10px;
+    margin-top: 25px;
+    margin-bottom: 12.5px;
+    margin-left: 200px;
+  }
+
+}
+
+
+// Log-in
+.bg-modal {
+  display: none;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Crimson Text', serif;
+}
+
+.modal-content {
+  width: 400px;
+  height: 500px;
+  background-color: white;
+  border-radius: 3px;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 40px;
+  transform: rotate(45deg);
+  color: black;
+  font-weight: 10px;
+}
+
+// Signup
+.modal {
+  display: none;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Crimson Text', serif;
+}
+
+.modal-content {
+  width: 400px;
+  height: 500px;
+  background-color: white;
+  border-radius: 3px;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+}
+
+.exit {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 40px;
+  transform: rotate(45deg);
+  color: black;
+  font-weight: 10px;
+}

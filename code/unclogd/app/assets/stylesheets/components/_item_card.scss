@@ -1,0 +1,28 @@
+.item-card {
+
+  a:visited {
+    color: black;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .picture-container {
+    height: 330px;
+    background: white;
+    border: solid 4px;
+
+  }
+
+  .item-picture {
+    height: 324px;
+    padding: 15px;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

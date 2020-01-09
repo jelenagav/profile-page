@@ -1,0 +1,38 @@
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans|Karla" rel="stylesheet">
+<!-- <div class="navbar"> -->
+  <!-- Right Navigation -->
+  <div class="main-nav">
+    <% if user_signed_in? %>
+      <ul class="hidden-xs hidden-sm">
+        <li><%= link_to "Search", items_path, class: "is-active search" %></li>
+        <li><%= link_to "Quiz", quiz_path %></li>
+        <li><%= link_to "Account", user_path(current_user) %></li>
+        <li><%= link_to "Basket", package_path(current_user.active_package) %></li>
+        <li><%= link_to "Compare", package_path(current_user.active_package) %></li>
+        <li><%= link_to t(".sign_out", default: "Log out"), destroy_user_session_path, method: :delete %></li>
+      </ul>
+
+        <a href="#" class="main-nav-trigger hidden-xs hidden-sm">
+          <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
+        </a>
+    <% end %>
+    <!-- Login Link (when logged out) -->
+    <!-- Dropdown list appearing on mobile only -->
+    <div class="hidden-md hidden-lg">
+      <% if user_signed_in? %>
+      <div class="dropdown dropdown-content">
+        <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
+        <ul class="dropdown-menu dropdown-menu-right navbar-dropdown-menu">
+          <li><%= link_to "Search", items_path, class: "is-active search" %></li>
+          <li><%= link_to "Quiz", quiz_path %></li>
+          <li><%= link_to "Account", user_path(current_user) %></li>
+          <li><%= link_to "Basket", package_path(current_user.active_package) %></li>
+          <li><%= link_to "Compare", package_path(current_user.active_package) %></li>
+          <li><%= link_to t(".sign_out", default: "Log out"), destroy_user_session_path, method: :delete %></li>
+        </ul>
+      </div>
+      <% end %>
+    </div>
+  </div>
+<!-- </div> -->
+
